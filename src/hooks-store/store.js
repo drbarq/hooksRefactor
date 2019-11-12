@@ -12,7 +12,6 @@ export const useStore = () => {
         const newState = actions[actionIdentifier](globalState, payload)   // Reducerr function
         globalState = {...globalState, ...newState}
 
-
         for (const listener of listeners) {
             listener(globalState)
         }
