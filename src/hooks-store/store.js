@@ -9,7 +9,7 @@ export const useStore = () => {
     const [state, setState] = useState(globalState)
 
     const dispatch = (actionIdentifier, payload) => {
-        const newState = actions[actionIdentifier](globalState)   // Reducerr function
+        const newState = actions[actionIdentifier](globalState, payload)   // Reducerr function
         globalState = {...globalState, ...newState}
 
 
